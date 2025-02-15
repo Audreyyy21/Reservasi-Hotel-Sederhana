@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 13, 2025 at 10:28 AM
+-- Generation Time: Feb 15, 2025 at 08:03 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -103,7 +103,10 @@ CREATE TABLE `reservasi` (
 
 INSERT INTO `reservasi` (`reservasi_id`, `tamu_id`, `kamar_id`, `tanggal_checkin`, `tanggal_checkout`, `status`, `total_harga`, `status_pembayaran`, `metode_pembayaran`) VALUES
 (7, 11, 3, '2025-02-21', '2025-02-22', 'Dipesan', 800000.00, 'Sudah Bayar', 'Tunai'),
-(8, 12, 4, '2025-02-21', '2025-02-22', 'Dipesan', 300000.00, 'Sudah Bayar', 'Transfer Bank');
+(8, 12, 4, '2025-02-21', '2025-02-22', 'Selesai', 300000.00, 'Sudah Bayar', 'Transfer Bank'),
+(9, 13, 7, '2025-02-17', '2025-02-20', 'Selesai', 3000000.00, 'Sudah Bayar', 'Tunai'),
+(10, 14, 4, '2025-02-14', '2025-02-15', 'Dipesan', 300000.00, 'Sudah Bayar', 'Tunai'),
+(11, 15, 2, '2025-02-14', '2025-02-15', 'Selesai', 500000.00, 'Sudah Bayar', 'Tunai');
 
 -- --------------------------------------------------------
 
@@ -126,7 +129,10 @@ CREATE TABLE `tamu` (
 
 INSERT INTO `tamu` (`tamu_id`, `nama`, `email`, `telepon`, `alamat`, `kota`) VALUES
 (11, 'wildan', 'audreymediliani@gmail.com', '0895702829606', 'Link. Baru', 'Kota Cilegon'),
-(12, 'laras', 'laras.10122285@mahasiswa.unikom.ac.id', '089578342522', 'Jl. Tubagus Ismail Dalam No.11', 'Kota Bandung');
+(12, 'laras', 'laras.10122285@mahasiswa.unikom.ac.id', '089578342522', 'Jl. Tubagus Ismail Dalam No.11', 'Kota Bandung'),
+(13, 'bapak agus', 'agusaja@gmail.com', '12345678', 'Jl. Suka Aja', 'Kota Tasik'),
+(14, 'Felix', 'felixA@gmail.com', '081324136428', 'Sekelo', 'bandung'),
+(15, 'Agus', 'Agus@gmail.com', '081324167064', 'sekelo', 'bandung');
 
 -- --------------------------------------------------------
 
@@ -198,19 +204,19 @@ ALTER TABLE `hari_libur`
 -- AUTO_INCREMENT for table `kamar`
 --
 ALTER TABLE `kamar`
-  MODIFY `kamar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `kamar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `reservasi`
 --
 ALTER TABLE `reservasi`
-  MODIFY `reservasi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `reservasi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tamu`
 --
 ALTER TABLE `tamu`
-  MODIFY `tamu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `tamu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
